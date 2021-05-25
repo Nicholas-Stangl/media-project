@@ -41,7 +41,7 @@ const AllMedia = () => {
             <h1 className="text-center">Our Media Reccomendations</h1>
             <br/>
             <div class="col text-center">
-            <button><Link to="/create">Add a Reccomendation</Link></button>
+            <button className="btn btn-light"><Link to="/create">Add a Reccomendation</Link></button>
             </div>
             <br/>
             <div className="row">

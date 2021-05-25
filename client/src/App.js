@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import { Router, Link } from '@reach/router';
 import AllMedia from './components/AllMedia';
 import OneItem from './components/OneItem';
