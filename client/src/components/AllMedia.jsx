@@ -38,7 +38,7 @@ const AllMedia = () => {
         <div className="container">
             <br/>
             <br/>
-            <h1 className="text-center">Our Media Reccomendations</h1>
+            <h1 className="text-center text-light">Our Media Recommendations</h1>
             <br/>
             <div class="col text-center">
             <button className="btn btn-light"><Link to="/create">Add a Reccomendation</Link></button>
@@ -48,60 +48,60 @@ const AllMedia = () => {
 
 
                 <div className="col">
-                    <h3>Movies</h3>
+                    <h3 className="text-light">Movies</h3>
                     {allItems.filter(item => item.type === "Movie").map((item, i) => {
                         return <div key={i} className="card">
                             <div className="card-body">
                                 <h4 className="card-title">{item.title}</h4>
                                 <p>Released: {item.release_date}</p>
                                 <p>Reccomended by: {item.rec_by}</p>
-                                <button><Link to={`/detail/${item._id}`}>Read More</Link></button>
-                                <button onClick={(e) => deleteProd(e, item._id)} >Delete</button>
+                                <button className="btn btn-dark mr-2"><Link to={`/detail/${item._id}`}>Read More</Link></button>
+                                <button className="btn btn-danger" onClick={(e) => deleteProd(e, item._id)} >Delete</button>
                             </div>
                         </div>
                     })}
                 </div>
 
                 <div className="col">
-                    <h3>TV Shows</h3>
+                    <h3 className="text-light">TV Shows</h3>
                     {allItems.filter(item => item.type === "TV Show").map((item, i) => {
                         return <div key={i} className="card">
                             <div className="card-body">
                                 <h4 className="card-title">{item.title}</h4>
                                 <p>Released: {item.release_date}</p>
                                 <p>Reccomended by: {item.rec_by}</p>
-                                <button><Link to={`/detail/${item._id}`}>Read More</Link></button>
-                                <button onClick={(e) => deleteProd(e, item._id)} >Delete</button>
+                                <button className="btn btn-dark mr-2"><Link to={`/detail/${item._id}`}>Read More</Link></button>
+                                <button className="btn btn-danger" onClick={(e) => deleteProd(e, item._id)} >Delete</button>
                             </div>
                         </div>
                     })}
                 </div>
 
                 <div className="col">
-                    <h3>Books</h3>
+                    <h3 className="text-light">Books</h3>
                     {allItems.filter(item => item.type === "Book").map((item, i) => {
                         return <div key={i} className="card">
                             <div className="card-body">
                                 <h4 className="card-title">{item.title}</h4>
                                 <p>Released: {item.release_date}</p>
                                 <p>Reccomended by: {item.rec_by}</p>
-                                <button><Link to={`/detail/${item._id}`}>Read More</Link></button>
-                                <button onClick={(e) => deleteProd(e, item._id)} >Delete</button>
+                                <button className="btn btn-dark mr-2"><Link to={`/detail/${item._id}`}>Read More</Link></button>
+                                <button className="btn btn-danger" onClick={(e) => deleteProd(e, item._id)} >Delete</button>
                             </div>
                         </div>
                     })}
                 </div>
 
                 <div className="col">
-                    <h3>Other</h3>
+                    <h3 className="text-light">Other</h3>
                     {allItems.filter(item => item.type === "Other").map((item, i) => {
                         return <div key={i} className="card">
                             <div className="card-body">
                                 <h4 className="card-title">{item.title}</h4>
                                 <p>Released: {item.release_date}</p>
                                 <p>Reccomended by: {item.rec_by}</p>
-                                <button><Link to={`/detail/${item._id}`}>Read More</Link></button>
-                                <button onClick={(e) => deleteProd(e, item._id)} >Delete</button>
+                                <button className="btn btn-dark mr-2"><Link to={`/detail/${item._id}`}>Read More</Link></button>
+                                <button className="btn btn-danger" onClick={(e) => deleteProd(e, item._id)} >Delete</button>
                             </div>
                         </div>
                     })}

@@ -39,22 +39,24 @@ const OneItem = (props) => {
             <Link to="/">Back to Home Page</Link>
             </div>
             <div className="container">
-            <h1>Read more about:</h1>
+            <h1 className="text-light">Read more about: {itemInfo.title} </h1>
             <div className="card-body">
-                                <h2 className="card-title">{itemInfo.title}</h2>
-                                <h5>({itemInfo.type})</h5>
-                                <img className="car-img-top" src={itemInfo.pic} alt={`${itemInfo.title} image`}/>
+                                <h2 className="card-title text-light">Title: {itemInfo.title}</h2>
+                                <h5 className="text-light">({itemInfo.type})</h5>
+
+                                {itemInfo.pic?<img className="car-img-top" src={itemInfo.pic} alt={`${itemInfo.title} image`}/> : ""}
                                 <br/>
                                 <br/>
-                                <p>Release Date: {itemInfo.release_date}</p>
-                                <p>Description: {itemInfo.desc}</p>
-                                <p>Reccomended By: {itemInfo.rec_by}</p>
-                                <a target="_blank" href={`${itemInfo.link}`}>Trailer Link</a>
+                                <p className="text-light">Release Date: {itemInfo.release_date}</p>
+                                <p className="text-light">Description: {itemInfo.desc}</p>
+                                <p className="text-light">Reccomended By: {itemInfo.rec_by}</p>
+                                { itemInfo.link? <a target="_blank" href={`${itemInfo.link}`}>Trailer Link</a> : ""}
+                            
                             </div>
-                            <button><Link to={`/edit/${itemInfo._id}`}>Edit {itemInfo.type} </Link></button>
+                            <button className="btn btn-dark"><Link to={`/edit/${itemInfo._id}`}>Edit {itemInfo.type} </Link></button>
                             <br/>
                             <br/>
-                            <button onClick={(e)=>deleteProd(e, itemInfo._id)} >Delete {itemInfo.type}</button>
+                            <button className="btn btn-danger" onClick={(e)=>deleteProd(e, itemInfo._id)} >Delete {itemInfo.type}</button>
             </div>
             <br/>
             <br/>
