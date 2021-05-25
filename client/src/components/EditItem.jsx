@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { navigate, Link } from '@reach/router';
 import axios from 'axios';
+import moment from 'moment';
 
 const EditItem = (props) => {
     const [formInfo, setFormInfo] = useState({
@@ -97,7 +98,7 @@ const EditItem = (props) => {
 
                 <div className="form-group">
                 <label htmlFor="">Release Date Date:</label>
-                <input type="date" name="release_date" className="form-control" value={formInfo.release_date} onChange={changeHandler}/>
+                <input type="date" name="release_date" className="form-control" value={moment(formInfo.release_date).format("LL")} onChange={changeHandler}/>
                 </div>
                 
                 <div className="form-group">

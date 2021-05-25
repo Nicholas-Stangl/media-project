@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { navigate, Link } from '@reach/router';
-import axios from 'axios'
+import axios from 'axios';
+import moment from 'moment';
 
 
 const OneItem = (props) => {
@@ -16,7 +17,6 @@ const OneItem = (props) => {
             setItemInfo(res.data.results)
         })
         .catch(err=> console.log (err))
-
     }, []);
 
     const deleteProd = (e, id) =>{
@@ -47,11 +47,10 @@ const OneItem = (props) => {
                                 {itemInfo.pic?<img className="car-img-top" src={itemInfo.pic} alt={`${itemInfo.title} image`}/> : ""}
                                 <br/>
                                 <br/>
-                                <p className="text-light">Release Date: {itemInfo.release_date}</p>
+                                <p className="text-light">Release Date: {moment(itemInfo.release_date).format("LL")}</p>
                                 <p className="text-light">Description: {itemInfo.desc}</p>
                                 <p className="text-light">Reccomended By: {itemInfo.rec_by}</p>
                                 { itemInfo.link? <a target="_blank" href={`${itemInfo.link}`}>Trailer Link</a> : ""}
-                            
                             </div>
                             <button className="btn btn-dark"><Link to={`/edit/${itemInfo._id}`}>Edit {itemInfo.type} </Link></button>
                             <br/>
