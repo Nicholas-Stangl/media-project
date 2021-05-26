@@ -3,13 +3,14 @@ import axios from "axios";
 
 const NewNet = () => {
     const [flixInfo, setFlixInfo] = useState([])
+    const API_KEY = process.env.REACT_APP_NETFLIX_API_KEY;
 
     const options = {
         method: 'GET',
         url: 'https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi',
         params: { q: 'get:new7:US', p: '1', t: 'ns', st: 'adv' },
         headers: {
-            'x-rapidapi-key': '2ef6fc79f4msh260b8621e35ccfap1133d8jsnfc219a25a280',
+            'x-rapidapi-key': API_KEY,
             'x-rapidapi-host': 'unogs-unogs-v1.p.rapidapi.com'
         }
     };
