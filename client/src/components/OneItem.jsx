@@ -47,7 +47,9 @@ const OneItem = (props) => {
                                 {itemInfo.pic?<img className="car-img-top" src={itemInfo.pic} alt={`${itemInfo.title} image`} style={{maxHeight: 350}}/> : ""}
                                 <br/>
                                 <br/>
-                                <p className="text-light">Release Date: {moment(itemInfo.release_date).format("LL")}</p>
+                                { itemInfo.release_date?
+                                <p className="text-light">Release Date: {moment(itemInfo.release_date).format("LL")}</p> : ""
+                                }
                                 <p className="text-light">Description: {itemInfo.desc}</p>
                                 <p className="text-light">Reccomended By: {itemInfo.rec_by}</p>
                                 { itemInfo.link? <a target="_blank" href={`${itemInfo.link}`}>Trailer Link</a> : ""}
