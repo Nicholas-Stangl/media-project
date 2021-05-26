@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from '@reach/router';
 import axios from 'axios';
 import moment from 'moment';
+import {motion} from 'framer-motion'
 
 const AllMedia = () => {
     const [allItems, setAllItems] = useState([])
@@ -48,10 +49,21 @@ const AllMedia = () => {
             <div className="row">
 
 
-                <div className="col">
+                <motion.div
+                    initial={{
+                        opacity: 0
+                        }} 
+                    animate={{
+                        opacity: 1
+                    }}
+                    transition={{
+                        duration: 3
+                    }}
+                    className="col">
                     <h3 className="text-light">Movies</h3>
                     {allItems.filter(item => item.type === "Movie").map((item, i) => {
-                        return <div key={i} className="card">
+                        return (
+                        <div key={i} className="card">
                             <div className="card-body">
                                 <h4 className="card-title">{item.title}</h4>
                                 <p>Released: {moment(item.release_date).format("LL")}</p>
@@ -59,11 +71,21 @@ const AllMedia = () => {
                                 <button className="btn btn-dark mr-2"><Link to={`/detail/${item._id}`}>Read More</Link></button>
                                 <button className="btn btn-danger" onClick={(e) => deleteProd(e, item._id)} >Delete</button>
                             </div>
-                        </div>
+                        </div>)
                     })}
-                </div>
+                </motion.div>
 
-                <div className="col">
+                <motion.div 
+                initial={{
+                    opacity: 0
+                    }} 
+                animate={{
+                    opacity: 1
+                }}
+                transition={{
+                    duration: 3
+                }}
+                className="col">
                     <h3 className="text-light">TV Shows</h3>
                     {allItems.filter(item => item.type === "TV Show").map((item, i) => {
                         return <div key={i} className="card">
@@ -76,9 +98,19 @@ const AllMedia = () => {
                             </div>
                         </div>
                     })}
-                </div>
+                </motion.div>
 
-                <div className="col">
+                <motion.div 
+                initial={{
+                    opacity: 0
+                    }} 
+                animate={{
+                    opacity: 1
+                }}
+                transition={{
+                    duration: 3
+                }}
+                className="col">
                     <h3 className="text-light">Books</h3>
                     {allItems.filter(item => item.type === "Book").map((item, i) => {
                         return <div key={i} className="card">
@@ -91,9 +123,19 @@ const AllMedia = () => {
                             </div>
                         </div>
                     })}
-                </div>
+                </motion.div>
 
-                <div className="col">
+                <motion.div 
+                initial={{
+                    opacity: 0
+                    }} 
+                animate={{
+                    opacity: 1
+                }}
+                transition={{
+                    duration: 3
+                }}
+                className="col">
                     <h3 className="text-light">Other</h3>
                     {allItems.filter(item => item.type === "Other").map((item, i) => {
                         return <div key={i} className="card">
@@ -106,7 +148,7 @@ const AllMedia = () => {
                             </div>
                         </div>
                     })}
-                </div>
+                </motion.div>
 
             </div>
         </div>

@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Router, Link } from '@reach/router';
+import {motion} from 'framer-motion'
 import AllMedia from './components/AllMedia';
 import OneItem from './components/OneItem';
 import CreateItem from './components/CreateItem';
