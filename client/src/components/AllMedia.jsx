@@ -44,7 +44,7 @@ const AllMedia = () => {
             <h1 className="text-center text-light">Our Media Recommendations</h1>
             <br/>
             <div class="col text-center">
-            <button className="btn btn-light"><Link to="/create">Add a Reccomendation</Link></button>
+            <motion.button whileHover={{scale:1.1}} className="btn btn-light"><Link to="/create">Add a Reccomendation</Link></motion.button>
             </div>
             <br/>
             <div className="row">
