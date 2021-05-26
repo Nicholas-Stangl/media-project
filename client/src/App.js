@@ -8,6 +8,7 @@ import OneItem from './components/OneItem';
 import CreateItem from './components/CreateItem';
 import EditItem from './components/EditItem';
 import styled from 'styled-components'
+import NewNet from './components/NewNet';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <OneItem path="/detail/:itemId"></OneItem>
         <CreateItem path="/create"></CreateItem>
         <EditItem path="/edit/:itemId"></EditItem>
+        <NewNet path="/newnet"></NewNet>
       </Router>
       <motion.div whileHover={{scale:1.1}}>
       <Image src={media} alt="tv"/>
