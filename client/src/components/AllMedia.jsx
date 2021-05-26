@@ -3,6 +3,7 @@ import { Link } from '@reach/router';
 import axios from 'axios';
 import moment from 'moment';
 import {motion} from 'framer-motion'
+import styled from 'styled-components'
 
 const AllMedia = () => {
     const [allItems, setAllItems] = useState([])
