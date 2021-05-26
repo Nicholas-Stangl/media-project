@@ -44,7 +44,7 @@ const OneItem = (props) => {
                                 <h2 className="card-title text-light">Title: {itemInfo.title}</h2>
                                 <h5 className="text-light">({itemInfo.type})</h5>
 
-                                {itemInfo.pic?<img className="car-img-top" src={itemInfo.pic} alt={`${itemInfo.title} image`}/> : ""}
+                                {itemInfo.pic?<img className="car-img-top" src={itemInfo.pic} alt={`${itemInfo.title} image`} style={{maxHeight: 350}}/> : ""}
                                 <br/>
                                 <br/>
                                 <p className="text-light">Release Date: {moment(itemInfo.release_date).format("LL")}</p>
