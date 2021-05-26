@@ -9,6 +9,7 @@ import CreateItem from './components/CreateItem';
 import EditItem from './components/EditItem';
 import styled from 'styled-components'
 import NewNet from './components/NewNet';
+import NYT_Best from './components/NYT_Best';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <CreateItem path="/create"></CreateItem>
         <EditItem path="/edit/:itemId"></EditItem>
         <NewNet path="/newnet"></NewNet>
+        <NYT_Best path="/nytBest"></NYT_Best>
       </Router>
       <motion.div whileHover={{scale:1.1}}>
       <Image src={media} alt="tv"/>

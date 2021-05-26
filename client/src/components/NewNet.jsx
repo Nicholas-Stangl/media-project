@@ -32,13 +32,13 @@ const NewNet = () => {
         <div className="container">
                         <br/>
             <br/>
-            <h1>Newest Titles on Netflix</h1>
+            <h1 style={{color: 'white'}}>Newest Titles on Netflix</h1>
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col"></th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Synopsis</th>
+                        <th scope="col" style={{color: 'white'}}>Title</th>
+                        <th scope="col" style={{color: 'white'}}>Synopsis</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,8 +46,8 @@ const NewNet = () => {
                         flixInfo.map((movie, idx) => {
                             return <tr key={idx}>
                                 <th scope="row"><img src={movie.image} alt="" /></th>
-                                <td><h3>{movie.title}</h3></td>
-                                <td>{movie.synopsis}</td>
+                                <td><h3 style={{color: 'white'}}>{movie.title}</h3></td>
+                                <td style={{color: 'white'}}>{movie.synopsis}</td>
                             </tr>
                         })
                     }
