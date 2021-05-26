@@ -92,7 +92,7 @@ const AllMedia = () => {
                         return <div key={i} className="card">
                             <div className="card-body">
                                 <h4 className="card-title">{item.title}</h4>
-                                <p>Released: {item.release_date}</p>
+                                <p>Released: {moment(item.release_date).format("LL")}</p>
                                 <p>Reccomended by: {item.rec_by}</p>
                                 <button className="btn btn-dark mr-2"><Link to={`/detail/${item._id}`}>Read More</Link></button>
                                 <button className="btn btn-danger" onClick={(e) => deleteProd(e, item._id)} >Delete</button>
@@ -117,7 +117,7 @@ const AllMedia = () => {
                         return <div key={i} className="card">
                             <div className="card-body">
                                 <h4 className="card-title">{item.title}</h4>
-                                <p>Released: {item.release_date}</p>
+                                <p>Released: {moment(item.release_date).format("LL")}</p>
                                 <p>Reccomended by: {item.rec_by}</p>
                                 <button className="btn btn-dark mr-2"><Link to={`/detail/${item._id}`}>Read More</Link></button>
                                 <button className="btn btn-danger" onClick={(e) => deleteProd(e, item._id)} >Delete</button>
@@ -142,7 +142,7 @@ const AllMedia = () => {
                         return <div key={i} className="card">
                             <div className="card-body">
                                 <h4 className="card-title">{item.title}</h4>
-                                <p>Released: {item.release_date}</p>
+                                <p>Released: {moment(item.release_date).format("LL")}</p>
                                 <p>Reccomended by: {item.rec_by}</p>
                                 <button className="btn btn-dark mr-2"><Link to={`/detail/${item._id}`}>Read More</Link></button>
                                 <button className="btn btn-danger" onClick={(e) => deleteProd(e, item._id)} >Delete</button>
